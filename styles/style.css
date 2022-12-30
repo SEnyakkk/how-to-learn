@@ -47,8 +47,9 @@
   width: 388px;
   line-height: 25px;
   font-size: 18px;
-  margin-left: 64px;
+  left: 64px;
   z-index: 2;
+  margin: 0;
 }
 
 .link {
@@ -80,24 +81,25 @@
 .description {
   margin: 100px auto 0 auto;
   display: flex;
-  justify-content: space-between;
-  width: 80%;
+  justify-content: center;
 }
 
 .two-columns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 80%;
 }
 
 .two-columns__brief {
   display: flex;
-  margin-top: 0;
+  margin: 0;
   color: #2f80ed;
   width: 175px;
   line-height: 1.2;
   font-size: 18px;
   font-style: normal;
+  font-weight: normal;
 }
 
 .two-columns__main-text {
@@ -109,21 +111,17 @@
 
 .two-columns__paragraph {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   line-height: 34px;
   font-size: 24px;
   font-style: normal;
 }
-
-/*ниже класс для установки отступов между параграфами. */
-.two-columns__paragraph_cenetr {
-  margin-top: 30px;
-  margin-bottom: 30px;
+/* псевдокласс убирает отступ снизу у третьего параграфа */
+.two-columns__paragraph:nth-of-type(3n) {
+  margin-bottom: 0;
 }
 
 .two-columns__span-accent {
-  line-height: 34px;
-  font-size: 24px;
   font-weight: 600;
 }
 
@@ -154,6 +152,7 @@
   line-height: 34px;
   font-size: 24px;
   font-style: normal;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -168,6 +167,7 @@
 }
 
 .table__cell {
+  list-style: none;
   margin-top: 60px;
   width: 250px;
 }
@@ -184,21 +184,19 @@
   line-height: 1.2;
   font-size: 18px;
   font-style: normal;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   padding-bottom: 0;
 }
 
-.table__text_subtext {
-  margin-top: 20px;
+.table__text:nth-of-type(2n) {
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 /* начинается секция Фейнман */
 
 .feynman {
   position: relative;
-  height: 890px;
+  min-height: 890px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -223,15 +221,17 @@
 
 .feyman__subtitle {
   margin-top: 70px;
+  margin-bottom: 0;
   line-height: 51px;
   font-size: 36px;
   font-style: normal;
+  font-weight: normal;
 }
 
 .feyman__link {
   position: absolute;
   top: 50%;
-  right: 46px;
+  right: 48px;
   line-height: 51px;
   font-size: 36px;
   font-style: normal;
@@ -249,14 +249,13 @@
   flex-direction: column;
   align-items: center;
 }
-.triangle {
+.kaufman__triangle {
   display: flex;
   width: 877px;
   height: 877px;
   position: absolute;
-  right: -200px;
+  right: -210px;
   top: 0px;
-  bottom: 90px;
   background-image: url(../images/kaufman-triangle.svg);
   background-repeat: no-repeat;
   background-size: 877px 877px;
@@ -293,6 +292,7 @@
   min-height: 350px;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -301,42 +301,44 @@
   justify-content: space-between;
 }
 
-.footer__column_content_copyright {
+/* общий класс для повторяющихся стилей flex footer */
+.footer__columns_content {
   display: flex;
   flex-direction: column;
-  flex-basis: 711px;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
+.footer__column_content_copyright {
+  position: relative;
+  flex-basis: 711px;
+}
+
+/* классы для индивидуальной настройки стиля
 .footer__column_content_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+
 }
 
 .footer__column_content_social {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+
 }
+*/
 
 .logo_place_footer {
   display: flex;
 }
 
 .footer__author {
-  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   line-height: 25px;
   font-size: 18px;
   font-style: normal;
   margin: 18px 0;
 }
 
-.footer_column-heading {
-  display: flex;
+.footer__column-heading {
   margin-top: 0;
   margin-bottom: 20px;
   line-height: 30px;
@@ -344,13 +346,12 @@
   font-weight: 600;
 }
 
-.footer_column-links {
-  display: flex;
+.footer__column-links {
   flex-direction: column;
   margin-bottom: 16px;
 }
 
-.footer_column-link {
+.footer__column-link {
   display: flex;
   margin: 0;
   line-height: 30px;
