@@ -307,14 +307,12 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
 }
 
 .footer__column_content_copyright {
   position: relative;
   flex-basis: 711px;
 }
-
 
 .footer__column_content_info {
   justify-content: start;
@@ -323,7 +321,6 @@
 .footer__column_content_social {
   justify-content: start;
 }
-
 
 .logo_place_footer {
   display: flex;
