@@ -281,7 +281,7 @@
   z-index: 2;
 }
 
-/* ниже тольео footer */
+/* ниже только footer */
 
 .footer {
   color: white;
@@ -297,16 +297,17 @@
 
 .footer__columns {
   display: flex;
-  width: 90%;
+  flex-direction: row;
   justify-content: space-between;
+  width: 90%;
 }
 
-/* общий класс для повторяющихся стилей flex footer */
+/* общий класс для повторяющихся стилей flex column_content */
 .footer__columns_content {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+
 }
 
 .footer__column_content_copyright {
@@ -314,15 +315,15 @@
   flex-basis: 711px;
 }
 
-/* классы для индивидуальной настройки стиля
-.footer__column_content_info {
 
+.footer__column_content_info {
+  justify-content: start;
 }
 
 .footer__column_content_social {
-
+  justify-content: start;
 }
-*/
+
 
 .logo_place_footer {
   display: flex;
