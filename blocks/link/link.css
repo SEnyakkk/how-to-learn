@@ -8,6 +8,6 @@
 }
 
 .link:hover {
-  transition: opacity 0.5s;
-  opacity: 0.3;
+  transition: opacity 0.3s;
+  opacity: 0.5;
 }
