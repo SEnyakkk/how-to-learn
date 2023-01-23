@@ -2,7 +2,7 @@
 /* общие стили для страницы index */
 @import url(../blocks/page/page.css);
 @import url(../blocks/logo/logo.css);
-@import url(../blocks/logo/_place_header/logo_place_header.css);
+@import url(../blocks/logo/_place/logo_place_header.css);
 @import url(../blocks/link/link.css);
 @import url(../blocks/section-title/section-title.css);
 @import url(../blocks/section-title/_them/section-title_theme_dark.css);
@@ -23,13 +23,14 @@
 @import url(../blocks/two-columns/__main-text/two-columns__main-text.css);
 @import url(../blocks/two-columns/__paragraph/two-columns__paragraph.css);
 @import url(../blocks/two-columns/__span-accent/two-columns__span-accent.css);
-/* блок techniques, вложен самостоятельный блок cards возможно повторное использование */
+/* блок techniques */
 @import url(../blocks/techniques/techniques.css);
-@import url(../blocks/techniques/cards/cards.css);
-@import url(../blocks/techniques/cards/__item/cards__item.css);
-@import url(../blocks/techniques/cards/__title/cards__title.css);
-@import url(../blocks/techniques/cards/__image/cards__image.css);
-@import url(../blocks/techniques/cards/__description/cards__description.css);
+/* вложен самостоятельный блок cards возможно повторное использование */
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/cards/__item/cards__item.css);
+@import url(../blocks/cards/__title/cards__title.css);
+@import url(../blocks/cards/__image/cards__image.css);
+@import url(../blocks/cards/__description/cards__description.css);
 /* блок video */
 @import url(../blocks/video/video.css);
 @import url(../blocks/video/__iframes/video__iframes.css);
@@ -49,7 +50,6 @@
 @import url(../blocks/table/__cell/_them/table__cell_theme_dark.css);
 @import url(../blocks/table/__heading/table__heading.css);
 @import url(../blocks/table/__text/table__text.css);
-@import url(../blocks/table/__text/table__text-nth-of-type\(2n\).css);
 /* блок khan */
 @import url(../blocks/khan/khan.css);
 @import url(../blocks/khan/__container/khan__container.css);
@@ -82,5 +82,5 @@
 @import url(../blocks/footer/__social-icon/footer__social-icon.css);
 @import url(../blocks/footer/__author/footer__author.css);
 /* стиль logo адаптированный под footer */
-@import url(../blocks/logo/_place_footer/logo_place_footer.css);
+@import url(../blocks/logo/_place/logo_place_footer.css);
 
